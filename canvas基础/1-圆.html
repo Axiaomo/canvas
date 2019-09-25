@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    window.onload = function () {
+      var canvas = document.getElementById("canvas");
+      canvas.width = 1024;
+      canvas.height = 768;
+      var context = canvas.getContext("2d");
+      context.lineWidth = 5;
+      context.strokeStyle = "#f00";
+      // 默认为false 顺时针 true 为逆时针
+      context.arc(300, 300, 200, 0, 1.5 * Math.PI);
+      context.stroke()
+    }
+  </script>
+</body>
+
+</html>
